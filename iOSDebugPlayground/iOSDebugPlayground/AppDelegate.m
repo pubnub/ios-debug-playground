@@ -6,8 +6,10 @@
 //  Copyright © 2016 Jordan Zucker. All rights reserved.
 //
 
-#import "AppDelegate.h"
 #import <PubNub/PubNub.h>
+#import "AppDelegate.h"
+#import "ViewController.h"
+#import "PNDebugConstants.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) PubNub *client;
@@ -15,9 +17,15 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    PNConfiguration *configuration = [PNConfiguration configurationWithPublishKey:kPNTestPublishKey subscribeKey:kPNTestSubscribeKey];
+    configuration.cipherKey = kPNTestCipherKey;
+    self.client = [PubNub clientWithConfiguration:configuration];
+    
+    ViewController *viewController = (ViewController *)self.window.rootViewController;
+    viewController.client = self.client;
+    
     return YES;
 }
 

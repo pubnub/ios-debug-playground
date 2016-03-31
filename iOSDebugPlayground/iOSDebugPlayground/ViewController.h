@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class PubNub;
 @interface ViewController : UIViewController
 
+@property (nonatomic, weak) PubNub *client;
 
 @end
 
