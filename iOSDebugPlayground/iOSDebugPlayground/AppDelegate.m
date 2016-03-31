@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import <PubNub/PubNub.h>
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) PubNub *client;
 @end
 
 @implementation AppDelegate
