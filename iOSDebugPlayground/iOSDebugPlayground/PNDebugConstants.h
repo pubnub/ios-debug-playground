@@ -12,8 +12,8 @@
 #define PNDebugConstants_h
 
 static NSString * const kPNTestChannelString = @"channel";
-static NSString * const kPNTestPublishKey = @"demo";
-static NSString * const kPNTestSubscribeKey = @"demo";
+static NSString * const kPNTestPublishKey = @"demo-36";
+static NSString * const kPNTestSubscribeKey = @"demo-36";
 static NSString * const kPNTestCipherKey = @"cipher";
 
 

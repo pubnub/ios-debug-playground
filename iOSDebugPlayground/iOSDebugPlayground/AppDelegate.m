@@ -26,6 +26,8 @@
     ViewController *viewController = (ViewController *)self.window.rootViewController;
     viewController.client = self.client;
     
+    [self.client subscribeToChannels:@[kPNTestChannelString] withPresence:YES];
+    
     return YES;
 }
 
